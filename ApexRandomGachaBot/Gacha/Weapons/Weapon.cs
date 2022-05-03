@@ -1,4 +1,4 @@
-﻿namespace ApexRandomGachaBot.Gacha;
+﻿namespace ApexRandomGachaBot.Gacha.Weapons;
 
 public static class Weapon
 {
@@ -44,7 +44,7 @@ public static class Weapon
 
     public static IReadOnlyList<string> GetWeapons(bool includeCraft, bool includeCarePackage)
     {
-        if (!includeCarePackage && !includeCarePackage)
+        if (!includeCraft && !includeCarePackage)
             return FieldWeapon;
 
         var weapons = new List<string>(FieldWeapon);

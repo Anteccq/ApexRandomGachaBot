@@ -1,4 +1,4 @@
-﻿namespace ApexRandomGachaBot.Gacha;
+﻿namespace ApexRandomGachaBot.Gacha.Weapons;
 
 public interface IWeaponGacha
 {

@@ -1,23 +1,29 @@
 ﻿using Utf8Json;
 
-namespace ApexRandomGachaBot;
+namespace ApexRandomGachaBot.Configuration;
 
 public class ConfigRepository : IConfigRepository
 {
     private const string FilePath = "./config.json";
     private static Config DefaultConfig => new("", '!');
-    public async Task<Config> GetOrCreateDefaultAsync()
+
+    private Config? _cachedConfig = null;
+    public async ValueTask<Config> GetOrCreateDefaultAsync()
     {
-        if (!File.Exists(FilePath))
-        {
-            var config = DefaultConfig;
-            await CreateConfigFileAsync(config);
-            return config;
-        }
+        if (_cachedConfig is not null)
+            return _cachedConfig;
 
         try
         {
-            return await GetAsync();
+            if (File.Exists(FilePath))
+            {
+                _cachedConfig = await GetAsync();
+                return _cachedConfig;
+            }
+
+            _cachedConfig = DefaultConfig;
+            await CreateConfigFileAsync(_cachedConfig);
+            return _cachedConfig;
         }
         catch
         {
@@ -33,7 +39,9 @@ public class ConfigRepository : IConfigRepository
 
     private static async Task CreateConfigFileAsync(Config config)
     {
+        var json = JsonSerializer.Serialize(config);
+        json = JsonSerializer.PrettyPrintByteArray(json);
         await using var fs = new FileStream(FilePath, FileMode.Create, FileAccess.Write);
-        await JsonSerializer.SerializeAsync(fs, config);
+        await fs.WriteAsync(json);
     }
 }

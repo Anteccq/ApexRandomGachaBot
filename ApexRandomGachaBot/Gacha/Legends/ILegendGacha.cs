@@ -1,6 +1,6 @@
-﻿namespace ApexRandomGachaBot.Gacha;
+﻿namespace ApexRandomGachaBot.Gacha.Legends;
 
-internal interface ILegendGacha
+public interface ILegendGacha
 {
     public string Gacha();
     public IEnumerable<string> Gacha(int count);
