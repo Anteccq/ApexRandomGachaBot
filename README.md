@@ -1,4 +1,6 @@
 # ApexRandomGachaBot
+[![Build](https://github.com/Anteccq/ApexRandomGachaBot/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/Anteccq/ApexRandomGachaBot/actions/workflows/build.yml)
+
 >Apex のレジェンドと武器をランダムで決めてくれる Discord Bot です。
 > 
 > Season 12 まで現在対応しています。Season 13 対応予定
