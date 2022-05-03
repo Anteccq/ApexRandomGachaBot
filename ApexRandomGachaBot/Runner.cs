@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 using ApexRandomGachaBot.Configuration;
-using ApexRandomGachaBot.Log;
+using ApexRandomGachaBot.Logging;
 using Discord;
 using Discord.Commands;
 using Discord.WebSocket;

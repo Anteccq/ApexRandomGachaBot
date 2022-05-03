@@ -21,4 +21,4 @@ jobs:
       - name: Build
         run: dotnet build ./ApexRandomGachaBot/ -c Debug
 #      - name: Test
-#        run: dotnet test ./Dimer.Tests/ -c Debug
+#        run: dotnet test ./ApexRandomGachaBot.Tests/ -c Debug
