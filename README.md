@@ -3,7 +3,7 @@
 > 
 > Season 12 まで現在対応しています。Season 13 対応予定
 
-初回起動時に同じディレクトリに作成される `config.json` に Discord のトークンを入力して利用してください。
+初回起動時に作成される `config.json` に Discord のトークンを入力して利用してください。
 
 Prefix の値を変更することで、コマンドの文字を切り替えることもできます。
 
@@ -61,7 +61,10 @@ Prefix の値を変更することで、コマンドの文字を切り替える�
 ```
 
 ## 開発環境
-* .NET Core 6
+* .NET 6
 
 ## License
 Under the MIT.
+
+## Special Thanks
+- [AI-Avalon](https://github.com/AI-Avalon)
