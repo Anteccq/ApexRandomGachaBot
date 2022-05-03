@@ -63,7 +63,16 @@ Prefix の値を変更することで、コマンドの文字を切り替える�
 ```
 
 ## 開発環境
-* .NET 6
+### Requirement
+* [.NET 6](https://dotnet.microsoft.com/ja-jp/download/dotnet/6.0)
+
+### Build & Run
+1. ApexRandomGachaBot.csproj ファイルがあるディレクトリまで移動
+1. `dotnet build -c Release` 
+1. bin/Release/net6.0 ディレクトリに移動
+1. `dotnet ./ApexRandomGachaBot.dll` (初回起動時は構成ファイル作成後に終了)
+1. config.json ファイルの Token の値に Discord のトークンを記入
+1. `dotnet ./ApexRandomGachaBot.dll` を再度実行。
 
 ## License
 Under the MIT.
