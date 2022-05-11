@@ -5,7 +5,7 @@ public static class Weapon
     private static readonly IReadOnlyList<string> FieldWeapon = new List<string>
     {
         "ヘムロック",
-        "R301 カービン",
+        "ロングボウ",
         "ハボック",
         "オルタネーター",
         "プラウラー",
@@ -24,14 +24,14 @@ public static class Weapon
         "ウィングマン",
         "30-30 リピーター",
         "ボセックボウ",
-        "ランページLMG",
+        "フラットライン",
         "C.A.R. SMG"
     };
 
     private static readonly IReadOnlyList<string> CraftWeapons = new List<string>
     {
-        "フラットライン",
-        "ロングボウ"
+        "ランページLMG",
+        "R301 カービン"
     };
 
     private static readonly IReadOnlyList<string> CarePackageWeapons = new List<string>
