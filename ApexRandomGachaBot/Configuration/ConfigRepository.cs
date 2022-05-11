@@ -1,17 +1,33 @@
-﻿using Utf8Json;
+﻿using Microsoft.Extensions.Configuration;
+using Utf8Json;
 
 namespace ApexRandomGachaBot.Configuration;
 
 public class ConfigRepository : IConfigRepository
 {
     private const string FilePath = "./config.json";
+    private const string TokenKeyName = "DiscordToken";
     private static Config DefaultConfig => new("", '!');
 
+    private readonly IConfiguration _configuration;
+
     private Config? _cachedConfig = null;
+
+    public ConfigRepository(IConfiguration configuration)
+    {
+        _configuration = configuration;
+    }
+
     public async ValueTask<Config> GetOrCreateDefaultAsync()
     {
         if (_cachedConfig is not null)
             return _cachedConfig;
+
+        if (!string.IsNullOrEmpty(_configuration[TokenKeyName]))
+        {
+            _cachedConfig = new Config(_configuration[TokenKeyName], '!');
+            return _cachedConfig;
+        }
 
         try
         {

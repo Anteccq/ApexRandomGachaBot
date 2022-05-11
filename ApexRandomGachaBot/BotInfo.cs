@@ -2,5 +2,5 @@
 
 public static class BotInfo
 {
-    public const string SupportedSeason = "12|Defiance";
+    public const string SupportedSeason = "13|Saviors";
 }
