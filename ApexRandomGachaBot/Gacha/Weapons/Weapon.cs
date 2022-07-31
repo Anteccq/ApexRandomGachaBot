@@ -16,28 +16,28 @@ public static class Weapon
         "チャージライフル",
         "センチネル",
         "EVA8",
-        "マスティフ",
+        "スピットファイア",
         "モザンビーク",
         "ピースキーパー",
         "RE-45",
         "P2020",
-        "ウィングマン",
+        "R301 カービン",
         "30-30 リピーター",
         "ボセックボウ",
         "フラットライン",
-        "C.A.R. SMG"
+        "ランページLMG"
     };
 
     private static readonly IReadOnlyList<string> CraftWeapons = new List<string>
     {
-        "ランページLMG",
-        "R301 カービン"
+        "C.A.R. SMG",
+        "ウィングマン"
     };
 
     private static readonly IReadOnlyList<string> CarePackageWeapons = new List<string>
     {
         "クレーバー",
-        "スピットファイア",
+        "マスティフ",
         "ボルト",
         "G7スカウト"
     };
