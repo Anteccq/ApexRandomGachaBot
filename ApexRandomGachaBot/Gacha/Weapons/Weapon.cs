@@ -5,41 +5,42 @@ public static class Weapon
     private static readonly IReadOnlyList<string> FieldWeapon = new List<string>
     {
         "ヘムロック",
-        "ロングボウ",
+        "ロングボウ DMR",
         "ハボック",
-        "オルタネーター",
-        "プラウラー",
-        "R-99",
+        "オルタネーター SMG",
+        "プラウラーバーストPDW",
+        "R-99 SMG",
         "デヴォーション",
-        "Lスター",
+        "L-STAR",
         "トリプルテイク",
         "チャージライフル",
         "センチネル",
         "EVA8",
-        "スピットファイア",
+        "M600スピットファイア",
         "モザンビーク",
         "ピースキーパー",
         "RE-45",
-        "P2020",
         "R301 カービン",
         "30-30 リピーター",
-        "ボセックボウ",
+        "G7スカウト",
         "フラットライン",
-        "ランページLMG"
-    };
-
-    private static readonly IReadOnlyList<string> CraftWeapons = new List<string>
-    {
+        "ボルトSMG",
         "C.A.R. SMG",
         "ウィングマン"
     };
 
+    private static readonly IReadOnlyList<string> CraftWeapons = new List<string>
+    {
+        "P2020",
+        "ハボックライフル"
+    };
+
     private static readonly IReadOnlyList<string> CarePackageWeapons = new List<string>
     {
-        "クレーバー",
+        "クレーバー.50",
         "マスティフ",
-        "ボルト",
-        "G7スカウト"
+        "ランページLMG",
+        "ボセックボウ"
     };
 
     public static IReadOnlyList<string> GetWeapons(bool includeCraft, bool includeCarePackage)
